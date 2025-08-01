@@ -64,9 +64,13 @@ nav {
 .hero {
   padding: 5rem 2rem;
   text-align: center;
-  background: linear-gradient(to right, #0077cc, #005fa3);
+  background: linear-gradient(to right, rgba(0, 119, 204, 0.7), rgba(0, 95, 163, 0.7)),
+              url('Drawing_assist_20250731_021338~2.jpg') no-repeat center center / cover;
   color: white;
+  background-blend-mode: overlay;
+  position: relative;
 }
+
 
 .hero h1 {
   font-size: 3rem;
