@@ -14,8 +14,8 @@ html, body {
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #111;
+  color: #eee;
 }
 
 a {
@@ -29,9 +29,9 @@ ul {
 
 /* Header and Navigation */
 header {
-  background-color: #fff;
+  background-color: #000;
   padding: 1.2rem 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(255, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -46,7 +46,7 @@ nav {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #0077cc;
+  color: #ff2b2b;
 }
 
 .nav-links {
@@ -58,45 +58,86 @@ nav {
   padding: 0.5rem 0.8rem;
   transition: background 0.3s, color 0.3s;
   border-radius: 4px;
+  color: #eee;
 }
 
 .nav-links a:hover,
 .nav-links .active {
-  background-color: #0077cc;
-  color: #fff;
+  background-color: #ff2b2b;
+  color: #000;
 }
 
 /* Hero Section */
 .hero {
-  padding: 5rem 2rem;
-  text-align: center;
-  color: white;
-  background: linear-gradient(to right, rgba(0, 119, 204, 0.7), rgba(0, 95, 163, 0.7)),
-              url('20250523_111238 (1).jpg') no-repeat center center;
-  background-size: cover;
-  background-blend-mode: overlay;
+  padding: 4rem 2rem;
+  background-color: #111;
   min-height: 90vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1 1 400px;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #ff2b2b; /* green shade */
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.hero-content .btn {
+  background-color: #ffffff;
+  color: #000;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.hero-content .btn:hover {
+  background-color: #ff2b2b;
+  color: #000;
+}
+
+/* Circular profile image */
+.hero-image {
+  flex: 1 1 300px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+.hero-image img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #ff2b2b;
+  box-shadow: 0 0 25px #ff2b2b;
+  transition: transform 0.3s ease;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+.hero-image img:hover {
+  transform: scale(1.05);
 }
+
 
 .btn {
   display: inline-block;
-  background-color: white;
-  color: #0077cc;
+  background-color: #ff2b2b;
+  color: #000;
   padding: 0.75rem 1.5rem;
   font-weight: bold;
   border-radius: 25px;
@@ -104,8 +145,8 @@ nav {
 }
 
 .btn:hover {
-  background-color: #005fa3;
-  color: white;
+  background-color: #ff5555;
+  color: #000;
 }
 
 /* Main content layout */
@@ -124,7 +165,7 @@ main {
 .content-section h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #0077cc;
+  color: #ff2b2b;
 }
 
 .content-section p {
@@ -141,21 +182,21 @@ main {
 }
 
 .project {
-  background: white;
+  background: #1c1c1c;
   padding: 1.5rem;
-  border: 1px solid #ddd;
+  border: 1px solid #333;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(255, 43, 43, 0.1);
 }
 
 .project h3 {
-  color: #0077cc;
+  color: #ff2b2b;
   margin-bottom: 0.5rem;
 }
 
 /* Footer */
 footer {
-  background-color: #222;
+  background-color: #000;
   color: white;
   text-align: center;
   padding: 2rem;
@@ -169,12 +210,12 @@ footer {
 .social-links a {
   margin: 0 0.5rem;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   transition: color 0.3s;
 }
 
 .social-links a:hover {
-  color: #0077cc;
+  color: #ff2b2b;
 }
 
 /* Responsive Design */
@@ -193,13 +234,18 @@ footer {
   }
 }
 
+/* Contact Section */
 .contact-section {
   padding: 4rem 2rem;
   max-width: 700px;
   margin: auto;
-  background-color: #f0f8ff;
+  background-color: #1a1a1a;
   text-align: center;
   border-radius: 10px;
+}
+
+.contact-section h1 {
+  color: #ff2b2b;
 }
 
 .contact-form {
@@ -212,16 +258,18 @@ footer {
 .contact-form input,
 .contact-form textarea {
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  border: 1px solid #444;
   border-radius: 6px;
   font-size: 1rem;
+  background-color: #000;
+  color: #fff;
   width: 100%;
 }
 
 .contact-form button {
   padding: 0.8rem;
-  background-color: #0077cc;
-  color: white;
+  background-color: #ff2b2b;
+  color: black;
   font-weight: bold;
   border: none;
   border-radius: 6px;
@@ -230,5 +278,40 @@ footer {
 }
 
 .contact-form button:hover {
-  background-color: #005fa3;
+  background-color: #ff5555;
+}
+.blog-section {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(255, 43, 43, 0.1);
+  color: #eee;
+  text-align: center;
+}
+
+.blog-section h1 {
+  color: #ff2b2b;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.blog-post {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #333;
+  text-align: left;
+}
+
+.blog-post h3 {
+  color: #ff2b2b;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-post p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
 }
